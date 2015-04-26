@@ -9,47 +9,40 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class RomanToArabicConverterTest {
 
-    @Test public void should_return_I() {
-        assertThat(RomanConverter.of(1).toRoman()).isEqualTo("I");
+    @Test public void should_return_1() {
+        assertThat(RomanConverter.of("I").toArabic()).isEqualTo(1);
     }
-    @Test public void should_return_II() {
-        assertThat(RomanConverter.of(2).toRoman()).isEqualTo("II");
+    @Test public void should_return_2() {
+        assertThat(RomanConverter.of("II").toArabic()).isEqualTo(2);
     }
-    @Test public void should_return_III() {
-        assertThat(RomanConverter.of(3).toRoman()).isEqualTo("III");
+    @Test public void should_return_3() {
+        assertThat(RomanConverter.of("III").toArabic()).isEqualTo(3);
     }
-    @Test public void should_return_IV() {
-        assertThat(RomanConverter.of(4).toRoman()).isEqualTo("IV");
+    @Test public void should_return_4() {
+        assertThat(RomanConverter.of("IV").toArabic()).isEqualTo(4);
     }
-    @Test public void should_return_V() {
-        assertThat(RomanConverter.of(5).toRoman()).isEqualTo("V");
+    @Test public void should_return_5() {
+        assertThat(RomanConverter.of("V").toArabic()).isEqualTo(5);
     }
-    @Test public void should_return_VI() {
-        assertThat(RomanConverter.of(6).toRoman()).isEqualTo("VI");
+    @Test public void should_return_6() {
+        assertThat(RomanConverter.of("VI").toArabic()).isEqualTo(6);
     }
-    @Test public void should_return_IX() {
-        assertThat(RomanConverter.of(9).toRoman()).isEqualTo("IX");
+    @Test public void should_return_999() {
+        assertThat(RomanConverter.of("CMXCIX").toArabic()).isEqualTo(999);
     }
-    @Test public void should_return_X() {
-        assertThat(RomanConverter.of(10).toRoman()).isEqualTo("X");
+    @Test public void should_return_1999() {
+        assertThat(RomanConverter.of("MCMXCIX").toArabic()).isEqualTo(1999);
     }
-    @Test public void should_return_CMXCIX() {
-        assertThat(RomanConverter.of(999).toRoman()).isEqualTo("CMXCIX");
+    @Test public void should_return_1990() {
+        assertThat(RomanConverter.of("MCMXC").toArabic()).isEqualTo(1990);
     }
-    @Test public void should_return_MCMXCIX() {
-        assertThat(RomanConverter.of(1999).toRoman()).isEqualTo("MCMXCIX");
+    @Test public void should_return_2015() {
+        assertThat(RomanConverter.of("MMXV").toArabic()).isEqualTo(2015);
     }
-    @Test public void should_return_MCMXC() {
-        assertThat(RomanConverter.of(1990).toRoman()).isEqualTo("MCMXC");
+    @Test public void should_return_2751() {
+        assertThat(RomanConverter.of("MMDCCLI").toArabic()).isEqualTo(2751);
     }
-    @Test public void should_return_MMXV() {
-        assertThat(RomanConverter.of(2015).toRoman()).isEqualTo("MMXV");
+    @Test public void should_return_3999() {
+        assertThat(RomanConverter.of("MMMCMXCIX").toArabic()).isEqualTo(3999);
     }
-    @Test public void should_return_MMDCCLI() {
-        assertThat(RomanConverter.of(2751).toRoman()).isEqualTo("MMDCCLI");
-    }
-    @Test public void should_return_MMMCMXCIX() {
-        assertThat(RomanConverter.of(3999).toRoman()).isEqualTo("MMMCMXCIX");
-    }
-
 }
